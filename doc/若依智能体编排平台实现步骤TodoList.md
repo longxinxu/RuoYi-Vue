@@ -57,27 +57,27 @@
 ## Phase 2：治理能力注入（审计、成本、权限）
 
 ### P2-1 ExecutionContext 与 Trace
-- [ ] 设计 `ExecutionContext`：`traceId/sessionId/tenantId/userId/variables/artifacts`
-- [ ] 请求入口自动注入 trace 与租户上下文
-- [ ] 关键链路日志标准化（输入摘要/输出摘要/耗时/token）
+- [x] 设计 `ExecutionContext`：`traceId/sessionId/tenantId/userId/variables/artifacts`
+- [x] 请求入口自动注入 trace 与租户上下文
+- [x] 关键链路日志标准化（输入摘要/输出摘要/耗时/token）
 
 ### P2-2 Advisor 机制
-- [ ] 定义 Advisor SPI：`preAdvisor`、`postAdvisor`
-- [ ] 默认内置：
-  - 上下文注入 Advisor
-  - 输出结构校验 Advisor
-  - 风险词检测 Advisor
-- [ ] ClientVersion 支持绑定 Advisor 列表
+- [x] 定义 Advisor SPI：`preAdvisor`、`postAdvisor`
+- [x] 默认内置：
+  - [x] 上下文注入 Advisor
+  - [x] 输出结构校验 Advisor
+  - [x] 风险词检测 Advisor
+- [x] ClientVersion 支持绑定 Advisor 列表
 
 ### P2-3 成本与配额
-- [ ] 记录 token 用量与估算成本
-- [ ] 增加 `tokenBudget/toolBudget` 限制
-- [ ] 超预算中断策略 + 明确错误码
+- [x] 记录 token 用量与估算成本
+- [x] 增加 `tokenBudget/toolBudget` 限制
+- [x] 超预算中断策略 + 明确错误码
 
 ### P2-4 验收（Phase 2 Gate）
-- [ ] 每次调用可在日志中追踪 token、耗时、状态
-- [ ] Advisor 可配置启停并生效
-- [ ] 预算策略可触发并阻断执行
+- [x] 每次调用可在日志中追踪 token、耗时、状态
+- [x] Advisor 可配置启停并生效
+- [x] 预算策略可触发并阻断执行
 
 ---
 
@@ -213,7 +213,7 @@
 ## AI Coding 执行顺序（建议直接照此迭代）
 
 1. [ ] **Iteration 1**：P1-1 ~ P1-4（拿到单 Client 闭环）
-2. [ ] **Iteration 2**：P2-1 ~ P2-4（治理能力上线）
+2. [x] **Iteration 2**：P2-1 ~ P2-4（治理能力上线）
 3. [ ] **Iteration 3**：P3-1 ~ P3-4（RAG 接入）
 4. [ ] **Iteration 4**：P4-1 ~ P4-4（MCP 接入）
 5. [ ] **Iteration 5**：P5-1 ~ P5-4（单 Agent DAG）
