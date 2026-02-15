@@ -18,5 +18,10 @@
             <artifactId>ruoyi-ai-core</artifactId>
             <version>${ruoyi.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.ruoyi</groupId>
+            <artifactId>ruoyi-ai-infra</artifactId>
+            <version>${ruoyi.version}</version>
+        </dependency>
     </dependencies>
 </project>
