@@ -18,12 +18,12 @@
 ## Phase 1：基础骨架与最小可运行 Client
 
 ### P1-1 项目与模块骨架
-- [ ] 新建（或确认）模块分层：
+- [x] 新建（或确认）模块分层：
   - `ruoyi-modules/ruoyi-ai-api`（对外 API）
   - `ruoyi-modules/ruoyi-ai-core`（引擎与编排核心）
   - `ruoyi-modules/ruoyi-ai-infra`（DAO、三方适配）
-- [ ] 建立基础包结构：`client/agent/graph/runtime/governance/eval`
-- [ ] 增加统一异常码与错误模型（AI 领域错误码）
+- [x] 建立基础包结构：`client/agent/graph/runtime/governance/eval`
+- [x] 增加统一异常码与错误模型（AI 领域错误码）
 
 ### P1-2 数据库初始化（MVP）
 - [ ] 创建首批 DDL（最小闭环）：
