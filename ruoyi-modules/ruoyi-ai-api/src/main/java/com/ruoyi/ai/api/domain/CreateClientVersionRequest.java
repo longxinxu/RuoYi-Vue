@@ -10,6 +10,9 @@ public class CreateClientVersionRequest
     private String modelName;
     private String promptTemplate;
     private String outputSchema;
+    private String advisorCodes;
+    private Integer tokenBudget;
+    private Integer toolBudget;
 
     public String getVersion()
     {
@@ -49,6 +52,37 @@ public class CreateClientVersionRequest
     public void setPromptTemplate(String promptTemplate)
     {
         this.promptTemplate = promptTemplate;
+    }
+
+
+    public String getAdvisorCodes()
+    {
+        return advisorCodes;
+    }
+
+    public void setAdvisorCodes(String advisorCodes)
+    {
+        this.advisorCodes = advisorCodes;
+    }
+
+    public Integer getTokenBudget()
+    {
+        return tokenBudget;
+    }
+
+    public void setTokenBudget(Integer tokenBudget)
+    {
+        this.tokenBudget = tokenBudget;
+    }
+
+    public Integer getToolBudget()
+    {
+        return toolBudget;
+    }
+
+    public void setToolBudget(Integer toolBudget)
+    {
+        this.toolBudget = toolBudget;
     }
 
     public String getOutputSchema()

@@ -1,7 +1,10 @@
 package com.ruoyi.ai.client.domain;
 
 import java.io.Serializable;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 
 /**
  * AI client version definition.
@@ -17,6 +20,9 @@ public class AiClientVersion implements Serializable
     private String modelName;
     private String promptTemplate;
     private String outputSchema;
+    private String advisorCodes;
+    private Integer tokenBudget;
+    private Integer toolBudget;
     private Date createTime;
     private Date updateTime;
 
@@ -88,6 +94,46 @@ public class AiClientVersion implements Serializable
     public void setOutputSchema(String outputSchema)
     {
         this.outputSchema = outputSchema;
+    }
+
+
+    public String getAdvisorCodes()
+    {
+        return advisorCodes;
+    }
+
+    public void setAdvisorCodes(String advisorCodes)
+    {
+        this.advisorCodes = advisorCodes;
+    }
+
+    public List<String> advisorCodeList()
+    {
+        if (advisorCodes == null || advisorCodes.trim().isEmpty())
+        {
+            return Collections.emptyList();
+        }
+        return Arrays.asList(advisorCodes.split(","));
+    }
+
+    public Integer getTokenBudget()
+    {
+        return tokenBudget;
+    }
+
+    public void setTokenBudget(Integer tokenBudget)
+    {
+        this.tokenBudget = tokenBudget;
+    }
+
+    public Integer getToolBudget()
+    {
+        return toolBudget;
+    }
+
+    public void setToolBudget(Integer toolBudget)
+    {
+        this.toolBudget = toolBudget;
     }
 
     public Date getCreateTime()

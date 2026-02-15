@@ -22,6 +22,9 @@
         <result property="modelName" column="model_name"/>
         <result property="promptTemplate" column="prompt_template"/>
         <result property="outputSchema" column="output_schema"/>
+        <result property="advisorCodes" column="advisor_codes"/>
+        <result property="tokenBudget" column="token_budget"/>
+        <result property="toolBudget" column="tool_budget"/>
         <result property="createTime" column="create_time"/>
         <result property="updateTime" column="update_time"/>
     </resultMap>
@@ -40,20 +43,23 @@
 
     <insert id="insertClientVersion" parameterType="com.ruoyi.ai.client.domain.AiClientVersion" useGeneratedKeys="true"
             keyProperty="versionId">
-        insert into ai_client_version(client_id, version, status, model_name, prompt_template, output_schema, create_time,
-                                      update_time)
-        values (#{clientId}, #{version}, #{status}, #{modelName}, #{promptTemplate}, #{outputSchema}, now(), now())
+        insert into ai_client_version(client_id, version, status, model_name, prompt_template, output_schema, advisor_codes,
+                                      token_budget, tool_budget, create_time, update_time)
+        values (#{clientId}, #{version}, #{status}, #{modelName}, #{promptTemplate}, #{outputSchema}, #{advisorCodes},
+                #{tokenBudget}, #{toolBudget}, now(), now())
     </insert>
 
     <select id="selectClientVersion" resultMap="AiClientVersionResult">
-        select version_id, client_id, version, status, model_name, prompt_template, output_schema, create_time, update_time
+        select version_id, client_id, version, status, model_name, prompt_template, output_schema, advisor_codes,
+               token_budget, tool_budget, create_time, update_time
         from ai_client_version
         where client_id = #{clientId}
           and version = #{version}
     </select>
 
     <select id="selectPublishedVersion" resultMap="AiClientVersionResult">
-        select version_id, client_id, version, status, model_name, prompt_template, output_schema, create_time, update_time
+        select version_id, client_id, version, status, model_name, prompt_template, output_schema, advisor_codes,
+               token_budget, tool_budget, create_time, update_time
         from ai_client_version
         where client_id = #{clientId}
           and status = 'published'

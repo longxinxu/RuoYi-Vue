@@ -10,6 +10,10 @@ public enum AiErrorCode
     AI_PROMPT_RENDER_FAILED("AI-PROMPT-500", "Prompt render failed."),
     AI_MODEL_CALL_FAILED("AI-MODEL-500", "Model invocation failed."),
     AI_OUTPUT_PARSE_FAILED("AI-OUTPUT-500", "Model output parse failed."),
+    AI_ADVISOR_VALIDATION_FAILED("AI-ADVISOR-422", "Advisor validation failed."),
+    AI_RISK_WORD_DETECTED("AI-RISK-422", "Risk content detected in output."),
+    AI_TOKEN_BUDGET_EXCEEDED("AI-BUDGET-TOKEN-429", "Token budget exceeded."),
+    AI_TOOL_BUDGET_EXCEEDED("AI-BUDGET-TOOL-429", "Tool budget exceeded."),
     AI_REQUEST_INVALID("AI-REQUEST-400", "AI request parameters are invalid."),
     AI_UNEXPECTED_ERROR("AI-UNEXPECTED-500", "AI orchestration unexpected error.");
 

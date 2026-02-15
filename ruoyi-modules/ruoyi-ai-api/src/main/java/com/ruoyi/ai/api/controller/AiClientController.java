@@ -51,6 +51,9 @@ public class AiClientController
         version.setModelName(request.getModelName());
         version.setPromptTemplate(request.getPromptTemplate());
         version.setOutputSchema(request.getOutputSchema());
+        version.setAdvisorCodes(request.getAdvisorCodes());
+        version.setTokenBudget(request.getTokenBudget());
+        version.setToolBudget(request.getToolBudget());
         return AjaxResult.success(clientDefinitionService.createClientVersion(clientId, version));
     }
 
