@@ -26,7 +26,7 @@
 - [x] 增加统一异常码与错误模型（AI 领域错误码）
 
 ### P1-2 数据库初始化（MVP）
-- [ ] 创建首批 DDL（最小闭环）：
+- [x] 创建首批 DDL（最小闭环）：
   - `ai_client_def`
   - `ai_client_version`
   - `ai_agent_def`
@@ -35,22 +35,22 @@
   - `ai_agent_client_edge`
   - `ai_agent_graph_def`
   - `ai_agent_graph_version`
-- [ ] 建立版本状态流转字段：`draft/published/deprecated`
-- [ ] 建立运行状态字段：`created/running/success/failed`
+- [x] 建立版本状态流转字段：`draft/published/deprecated`
+- [x] 建立运行状态字段：`created/running/success/failed`
 
 ### P1-3 ClientDefinition 与 ClientEngine
-- [ ] 定义 `AiClientDefinition`、`AiClientVersion` 领域对象
-- [ ] 实现 `ClientResolver`（按 appId/clientId/version 解析）
-- [ ] 实现 `ClientEngine` 最小链路：
+- [x] 定义 `AiClientDefinition`、`AiClientVersion` 领域对象
+- [x] 实现 `ClientResolver`（按 appId/clientId/version 解析）
+- [x] 实现 `ClientEngine` 最小链路：
   - Prompt 渲染
   - Model 调用（先接 1 个默认模型）
   - 输出解析
-- [ ] 实现 `POST /ai/client`、`POST /ai/client/{id}/version`、`POST /ai/client/{id}/debug-run`
+- [x] 实现 `POST /ai/client`、`POST /ai/client/{id}/version`、`POST /ai/client/{id}/debug-run`
 
 ### P1-4 验收（Phase 1 Gate）
-- [ ] 可以创建 Client + 发布版本
-- [ ] `debug-run` 能返回模型结果
-- [ ] 失败时可返回统一错误码与 traceId
+- [x] 可以创建 Client + 发布版本
+- [x] `debug-run` 能返回模型结果
+- [x] 失败时可返回统一错误码与 traceId
 
 ---
 
@@ -230,4 +230,3 @@
 - [ ] 运行链路可追踪（traceId 贯穿）
 - [ ] 关键失败场景有错误码与可读提示
 - [ ] 变更日志（CHANGELOG）已更新
-
